@@ -55,7 +55,17 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+         "heroku": {
+      "buildpacks": [
+        {
+          "url": "heroku-community/apt"
+        },
+        {
+          "url": "heroku/php"
         }
+      ]
+    }
     },
     "config": {
         "optimize-autoloader": true,

@@ -1,7 +1,11 @@
 {
-  "buildCommand": "composer install",
-  "startCommand": "php artisan migrate --force && php-fpm",
-  "environmentVariables": {
+ 
+
+   "buildCommand": "composer install --optimize-autoloader --no-dev",
+  "startCommand": "vendor/bin/heroku-php-apache2 public/",
+  "enviromentVariables": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-php.git",
+
     "NIXPACKS_PHP_VERSION": "8.3"
   }
 }
